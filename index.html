@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartShop AI - Personnalisation Intelligente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🛍️ SmartShop AI</h1>
+            <p class="tagline">E-commerce avec personnalisation IA en temps réel</p>
+        </header>
+
+        <!-- Section de sélection du profil -->
+        <section class="profile-selector">
+            <h2>Choisissez votre profil pour voir la magie de l'IA ✨</h2>
+            <div class="profiles">
+                <button class="profile-btn" data-profile="sportif">
+                    🏃‍♂️ Sportif<br><small>25 ans, Paris</small>
+                </button>
+                <button class="profile-btn" data-profile="parent">
+                    👨‍👩‍👧 Parent<br><small>40 ans, Lyon</small>
+                </button>
+                <button class="profile-btn" data-profile="tech">
+                    💻 Geek Tech<br><small>28 ans, Toulouse</small>
+                </button>
+                <button class="profile-btn" data-profile="mode">
+                    👗 Fashion<br><small>32 ans, Nice</small>
+                </button>
+            </div>
+        </section>
+
+        <!-- Zone de chargement -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>🤖 L'IA analyse vos préférences...</p>
+        </div>
+
+        <!-- Section personnalisée (masquée au début) -->
+        <section id="personalized-content" class="personalized-content hidden">
+            <!-- Message de bienvenue personnalisé -->
+            <div class="welcome-message">
+                <h2 id="welcome-text"></h2>
+                <p id="welcome-subtitle"></p>
+            </div>
+
+            <!-- Produits recommandés -->
+            <div class="recommendations">
+                <h3>🎯 Recommandations pour vous</h3>
+                <div id="products-grid" class="products-grid"></div>
+            </div>
+
+            <!-- Statistiques de personnalisation -->
+            <div class="stats">
+                <h3>📊 Analyse IA de votre profil</h3>
+                <div class="stats-grid" id="stats-grid"></div>
+            </div>
+
+            <!-- Explication MCP -->
+            <div class="mcp-explanation">
+                <h3>⚙️ Comment ça marche avec MCP ?</h3>
+                <div class="code-example">
+                    <pre id="mcp-code"></pre>
+                </div>
+            </div>
+
+            <!-- Bouton pour changer de profil -->
+            <button class="reset-btn" onclick="resetProfile()">🔄 Essayer un autre profil</button>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Créé avec ❤️ par Composio MCP • Demo de personnalisation IA</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
